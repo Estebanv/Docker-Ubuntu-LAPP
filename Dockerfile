@@ -5,7 +5,7 @@
 #	
 ##
 
-FROM ubuntu
+FROM ubuntu:14.10
 MAINTAINER attentiondeficit@gmail.com
 
 RUN apt-get update 
