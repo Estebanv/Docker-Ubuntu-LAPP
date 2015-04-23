@@ -26,6 +26,8 @@ RUN apt-get install -y php5-pgsql
 
 RUN apt-get install -y subversion
 
+RUN apt-get install -y mc
+
 COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 22 80
