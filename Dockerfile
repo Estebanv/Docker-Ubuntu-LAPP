@@ -30,6 +30,16 @@ RUN apt-get install -y mc
 
 COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+COPY conf/postgresql.conf /home/conf/
+
+COPY conf/postgresql.sh /usr/bin/
+
+COPY conf/apache2.sh /usr/bin/
+
+RUN postgresql.sh
+
+RUN apache2.sh
+
 EXPOSE 22 80
 
 CMD ["/usr/bin/supervisord"]
