@@ -30,7 +30,7 @@ RUN apt-get install -y mc
 
 COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-COPY conf/postgresql.conf /home/conf/
+COPY conf/postgresql.sql /home/conf/
 
 COPY conf/postgresql.sh /usr/bin/
 
